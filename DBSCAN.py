@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 mac2id = dict()
 onlinetimes = []
-f = open('TestData.txt',encoding='utf-8')
+f = open('data\TestData.txt',encoding='utf-8')
 for line in f:
     mac = line.split(',')[2]
     onlinetime = int(line.split(',')[6])

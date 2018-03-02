@@ -1,3 +1,4 @@
+#31省消费水平
 import numpy as np
 from sklearn.cluster import KMeans
 
@@ -15,7 +16,7 @@ def loadData(filePath):
 
 
 if __name__ == '__main__':
-    data, cityName = loadData('city.txt')
+    data, cityName = loadData('data\city.txt')
     km = KMeans(n_clusters=6)                             #n_clusters:用于指定聚类中心的个数
     label = km.fit_predict(data)                          #fit_predict():计算簇中心以及为簇分配序号
     expenses = np.sum(km.cluster_centers_, axis=1)        #聚类中心点的数值相加(即城市的平均花费)
